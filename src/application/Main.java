@@ -14,6 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			// Carregando a view (arquivo XML).
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
 			ScrollPane scroll = loader.load();
 			
@@ -21,7 +22,10 @@ public class Main extends Application {
 			scroll.setFitToHeight(true);
 			scroll.setFitToWidth(true);
 			
+			// Cena principal da aplicação.
 			mainScene = new Scene(scroll);
+			
+			// Palco principal da cena.
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
